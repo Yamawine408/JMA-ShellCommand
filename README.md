@@ -1,8 +1,8 @@
 This Python script return the latest earthquake info. in Japan. This info. is taken from the RSS feed from JMA (気象庁).
 I wrote this to let my Home Assistant speak an earthquake info.
 ## How to install this for Home Assistant
-Assume this script is saved as `www/shell_command/jma-earthquake.py`
-Put the following YAML code in your `configuration.yaml` file
+Assuming this script is saved as `www/shell_command/jma-earthquake.py`,
+put the following YAML code in your `configuration.yaml` file
 ```jma-earthquake.py
 command_line:
   - sensor:
