@@ -14,6 +14,4 @@ In this case, the earthquake info is obtained every 5 minutes.
 
 *JMA limits the total size of downloading data up to 10GB. Roughly, 100KB of data is downloaded once this script is called.*
 
-The `MAGNITUDE_THRESHOLD` value determins if the latest earthquake is big enough tp report or not. You may change its value according to your needs.
-
-
+The `MAGNITUDE_THRESHOLD` value determins if the latest earthquake is big enough to report or not. You may change its value according to your needs.
