@@ -2,7 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 import datetime
 
-# XML フィードURL
+# XML feed URL
 FEED_URL = "https://www.data.jma.go.jp/developer/xml/feed/eqvol.xml"
 
 ATOM = "{http://www.w3.org/2005/Atom}"
@@ -10,8 +10,6 @@ SEISMOLOGY1 = "{http://xml.kishou.go.jp/jmaxml1/body/seismology1/}"
 ELEMENTBASIS1 = "{http://xml.kishou.go.jp/jmaxml1/elementBasis1/}"
 
 MAGNITUDE_THRESHOLD = 4.0
-
-OUTPUT_FILE = "jma_earthquake.txt"  # HAのwwwフォルダ（内部でアクセス可能）
 
 def fetch_latest_earthquake():
     res = requests.get(FEED_URL)
