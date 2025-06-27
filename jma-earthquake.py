@@ -16,22 +16,22 @@ def fetch_latest_earthquake():
     res.raise_for_status()
     rt = ET.fromstring(res.content)
     for entry in rt:
-        if( entry.tag == ATOM+"entry" ):
-            title = entry.find( ATOM+"title" ).text
+        if( entry.tag == f"{ATOM}entry" ):
+            title = entry.find(f"{ATOM}title").text
             if( title == "震源・震度に関する情報" ):
-                link = entry.find(ATOM+'id').text
+                link = entry.find(f"{ATOM}id").text
                 eq = requests.get(link)
                 eq.raise_for_status()
                 ert = ET.fromstring(eq.content)
 
-                body = ert.find(SEISMOLOGY1+'Body')
-                quake = body.find(SEISMOLOGY1+'Earthquake')
-                time = quake.find(SEISMOLOGY1+'OriginTime').text
-                hypo = quake.find(SEISMOLOGY1+'Hypocenter')
-                area = hypo.find(SEISMOLOGY1+'Area')
-                area_name = area.find(SEISMOLOGY1+'Name').text
-                coord = area.find(ELEMENTBASIS1+'Coordinate').text
-                magstr = quake.find(ELEMENTBASIS1+'Magnitude').text
+                body = ert.find(f"{SEISMOLOGY1}Body")
+                quake = body.find(f"{SEISMOLOGY1}Earthquake")
+                time = quake.find(f"{SEISMOLOGY1}OriginTime").text
+                hypo = quake.find(f"{SEISMOLOGY1}Hypocenter")
+                area = hypo.find(f"{SEISMOLOGY1}Area")
+                area_name = area.find(f"{SEISMOLOGY1}Name").text
+                coord = area.find(f"{ELEMENTBASIS1}Coordinate").text
+                magstr = quake.find(f"{ELEMENTBASIS1}Magnitude").text
 
                 if( float(magstr) > MAGNITUDE_THRESHOLD ):
                     dt = datetime.datetime.strptime(time, "%Y-%m-%dT%H:%M:%S%z")
