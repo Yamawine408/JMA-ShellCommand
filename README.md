@@ -12,6 +12,6 @@ command_line:
 ```
 In this case, the earthquake info is obtained every 5 minutes. Do not forget ```chmod +x jma-earthquake.py```.
 
-*JMA limits the total size of downloading data up to 10GB. Roughly, 100KB of data is downloaded once this script is called.*
+*JMA limits the total size of downloading data up to 10GB per day. Roughly, 100KB of data is downloaded once this script is called.*
 
 The `MAGNITUDE_THRESHOLD` value determins if the latest earthquake is big enough to report or not. You may change its value according to your needs.
