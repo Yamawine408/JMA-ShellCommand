@@ -10,7 +10,7 @@ command_line:
       command: "python3 www/shell_command/jma-earthquake.py"
       scan_interval: 300
 ```
-In this case, the earthquake info is obtained every 5 minutes.
+In this case, the earthquake info is obtained every 5 minutes. Do not forget ```chmod +x jma-earthquake.py```.
 
 *JMA limits the total size of downloading data up to 10GB. Roughly, 100KB of data is downloaded once this script is called.*
 
