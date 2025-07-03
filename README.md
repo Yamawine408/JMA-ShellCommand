@@ -1,4 +1,4 @@
-This Python scripts return the latest weather and earthquake info. in JMA (気象庁).
+This Python scripts return the latest weather and earthquake info. from JMA (気象庁).
 
 ## jma-earthquake.py
 I wrote this to let my Home Assistant speak an earthquake info.
