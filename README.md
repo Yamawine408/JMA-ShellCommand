@@ -3,7 +3,7 @@ the RSS feed from JMA (気象庁).
 
 ## jma-earthquake.py
 I wrote this to let my Home Assistant speak an earthquake info.
-## How to install this for Home Assistant
+
 Assuming this script is saved as `www/shell_command/jma-earthquake.py`,
 put the following YAML code in your `configuration.yaml` file
 ```jma-earthquake.py
