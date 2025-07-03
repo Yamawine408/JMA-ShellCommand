@@ -19,11 +19,11 @@ In this case, the earthquake info is obtained every 5 minutes. Do not forget ```
 The `MAGNITUDE_THRESHOLD` value determins if the latest earthquake is big enough to report or not. You may change its value according to your needs.
 
 ## JMA-Weather-Chart.py
-This script is to obtain the latest weather chart (天気図) from JMA (気象庁). This script is designed
-reduce the traffic to JMA. Note that the weather data are collected every 3 hours (0, 3, 6, 9, 12, 15, 18, 21),
-and it takes 2:10 to produce a weather cahrt ([reference](https://www.jma.go.jp/jma/kishou/know/kurashi/tenkizu.html)).
+This script is to obtain the latest weather chart (天気図) from JMA (気象庁). This script is designed to
+reduce the traffic to JMA as much as possible. Note that the weather data are collected every 3 hours (0, 3, 6, 9, 12, 15, 18, 21),
+and it takes 2:10 to produce a weather chart ([reference](https://www.jma.go.jp/jma/kishou/know/kurashi/tenkizu.html)).
 
-Here is my configuration, assuming this script is copied as `www/shell_command/JMA-Weather-Chart.py`
+Here is my configuration, assuming this script is copied as `www/shell_command/JMA-Weather-Chart.py` in your Home Assistant environment.
 
 ```JMA-Weather-Chart.py
 command_line:
@@ -33,4 +33,4 @@ command_line:
       scan_interval: 1800
 ```
 
-To display the chart, I use [Refreshable Picture Card](https://github.com/dimagoltsman/refreshable-picture-card).
+To display this chart, I use [Refreshable Picture Card](https://github.com/dimagoltsman/refreshable-picture-card).
