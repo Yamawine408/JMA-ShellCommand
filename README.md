@@ -23,13 +23,13 @@ This script is to obtain the latest weather chart (天気図) from JMA (気象�
 reduce the traffic to JMA as much as possible. Note that the weather data are collected every 3 hours (0, 3, 6, 9, 12, 15, 18, 21),
 and it takes 2:10 to produce a weather chart ([reference](https://www.jma.go.jp/jma/kishou/know/kurashi/tenkizu.html)).
 
-Here is my configuration, assuming this script is copied as `www/shell_command/JMA-Weather-Chart.py` in your Home Assistant environment.
+Here is my configuration, assuming this script is copied as `www/shell_command/JMA-Weather-Chart.py` in your Home Assistant environment. This script takes an argument specifying the directory to store the chart. 
 
 ```JMA-Weather-Chart.py
 command_line:
   - sensor:
       name: Latest Weather Chart
-      command: "python3 www/shell_command/JMA-Weather-Chart.py"
+      command: "python3 www/shell_command/JMA-Weather-Chart.py www/shell_command"
       scan_interval: 1800
 ```
 
