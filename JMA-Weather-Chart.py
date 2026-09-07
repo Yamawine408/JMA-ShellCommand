@@ -1,4 +1,3 @@
-```python
 import urllib.request
 import urllib.error
 import os
@@ -181,4 +180,3 @@ if __name__ == '__main__':
     os.makedirs(prefix, exist_ok=True)
 
     download_weather_chart(prefix)
-```
